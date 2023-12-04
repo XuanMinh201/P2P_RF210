@@ -1,6 +1,6 @@
 # P2P for RF210 - SCAPA
 This git for examples P2P using module RAK3172 and MCU ESP32-C3
-# Overview
+### Overview
 
 ![image](https://github.com/XuanMinh201/P2P---RF210/assets/75436464/b5e0e804-5fc7-4523-b13d-a74fae75ba62)
 
@@ -10,8 +10,22 @@ RF210 board includes:
 -  Collect I2C sensor data
 -  Sw2 is a power switch with 3 levels. Turn on the left to use USB power (5V), turn on the right to use Battery power, in the middle is to turn off the power
 -  Sw1 is the UART switch, it connects Uart0 of the ESP32-C3 with Uart 2 of the RAK3172. To use AT command, Sw1 must be turned on
+### Softwave
+Aruino IDE (highly recommended to use the Legacy IDE Version at least version v1.6.8)
+Install   
+```json
+  https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
+```
+- Tool -> Board -> Boards manager to install esp32
 
-# P2P for RAK3172
+![image](https://github.com/XuanMinh201/P2P---RF210/assets/75436464/ba422b70-92a5-4262-a1e1-264554923c47)
+
+- Choose as below
+
+![image](https://github.com/XuanMinh201/P2P---RF210/assets/75436464/492fbaba-3ebb-4890-955b-938f88479deb)
+
+  
+### P2P for RAK3172
 
 To use this function, you need to upload the Bridge code and use serial to enter AT-commnad commands
 
@@ -29,14 +43,6 @@ To use this function, you need to upload the Bridge code and use serial to enter
   - Config for the sending device [AT+PSEND=11223344](https://docs.rakwireless.com/RUI3/Serial-Operating-Modes/AT-Command-Manual/#at-psend).
 
 ![image](https://github.com/XuanMinh201/P2P---RF210/assets/75436464/98565e5a-97cd-4844-a9f1-e1cabe244567)
-
-## Softwave
-
-
-### Aruino
-### STM32
-
-## Hardwave
 
 # ATC comnmand 
 
@@ -74,3 +80,5 @@ Command general format: ```ATC+<cmd>=?```
 - ```ATC+LDO=?``` : return LDO voltage on Rak3172 in mv, 0 if not available
 
 See details at [RF210](https://github.com/XuanMinh201/RF210)
+
+##### Maintained by XuanMinh201.
