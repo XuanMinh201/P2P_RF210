@@ -12,6 +12,9 @@ RF210 board includes:
 -  Sw1 is the UART switch, it connects Uart0 of the ESP32-C3 with Uart 2 of the RAK3172. To use AT command, Sw1 must be turned on
 
 # P2P for RAK3172
+
+To use this function, you need to upload the Bridge code and use serial to enter AT-commnad commands
+
 - To use P2P requires at least 2 devices. One to receive, one to send
 - Some notes before using P2P with AT-Command:
   - You need to direct the device to P2P mode using the command [AT+NWM=0](https://docs.rakwireless.com/RUI3/Serial-Operating-Modes/AT-Command-Manual/#at-nwm)
